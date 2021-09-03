@@ -6,10 +6,7 @@ on:
 jobs:
   unittest-ok:
     name: Pruebas
-    runs-on: ${{ matrix.os }}
-    strategy:
-      matrix:
-        os: [ubuntu-20.04,]
+    runs-on: ubuntu-latest
     steps:
     - name: Checkout de repositorio
       uses: actions/checkout@v2
