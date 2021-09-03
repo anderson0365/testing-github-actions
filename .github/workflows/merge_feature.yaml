@@ -27,7 +27,7 @@ jobs:
         node-version: '14.15'
     - name: Instalacion de librerías y dependencias de angular
       run: |
-        cd front-end/tutorial-canciones/
+        cd ./front-end/tutorial-canciones/
         npm i
         npm install -g @angular/cli
     - name: Instalacion de Google Chrome para pruebas de angular
