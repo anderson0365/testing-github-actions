@@ -30,7 +30,6 @@ jobs:
         cd front-end/tutorial-canciones/ && npm i && npm install -g @angular/cli
     - name: Instalacion de Google Chrome para pruebas de angular
       uses: browser-actions/setup-chrome@latest
-      run: chrome --version
       with:
         chrome-version: beta
     - name: Correr pruebas de flask
