@@ -24,7 +24,7 @@ jobs:
     - name: Configuracion de entorno de angular
       uses: actions/setup-node@v2
       with:
-        node-version: '14.7'
+        node-version: '14.15'
     - name: Instalacion de librerías y dependencias de angular
       run: |
         cd front-end/tutorial-canciones/ && npm i && npm install -g @angular/cli
