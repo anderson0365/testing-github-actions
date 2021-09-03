@@ -60,7 +60,7 @@ jobs:
   automerge:
     name: Automerge
     needs:
-      - unittest-ok
+      - check-commit
       - pruebas-flask
       - pruebas-angular
     runs-on: ubuntu-latest
