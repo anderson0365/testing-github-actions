@@ -61,7 +61,7 @@ jobs:
       - name: Corre pruebas de angular
         run: |
           cd front-end/tutorial-canciones/ && CHROMIUM_BIN=$(which chrome) ng test --watch=false --browsers=ChromeHeadless
-  release-and-pull-request:
+  create-release:
     name: Create release branch
     runs-on: ubuntu-latest
     needs:
@@ -72,10 +72,6 @@ jobs:
         uses: peterjgrainger/action-create-branch@v2.0.1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
-          branch: "release"
-      - name: Pull request
-        uses: peter-evans/create-pull-request@v3
         with:
           branch: "release"
 
