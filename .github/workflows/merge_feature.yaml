@@ -21,11 +21,9 @@ jobs:
       - name: Correr pruebas de flask
         id: correr-pruebas
         run: python -m unittest discover -s flaskr/tests
-      - name: Cálculo de cubrimiento (python)
-        id: cubrimiento
-        run: |
-          coverage run -m unittest discover -s flaskr/tests
-          coverage report -m
+      - name: Restaurar db
+        id: restaurar-db
+        run: git checkout HEAD -- flaskr/tutorial_canciones.db
   pruebas-angular:
     name: Pruebas Angular
     runs-on: ubuntu-latest
