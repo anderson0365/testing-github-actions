@@ -55,7 +55,7 @@ jobs:
     steps:
       - name: Merge feature to develop branch
         uses: devmasx/merge-branch@v1.3.1
-        if: "contains(github.event.head_commit.message, 'MERGE')"
+        if: "contains(github.event.head_commit.message, 'MERGE:')"
         with:
           type: now
           target_branch: dev
