@@ -53,10 +53,12 @@ jobs:
       - pruebas-angular
     runs-on: ubuntu-latest
     steps:
+      - name: Instalacion de librerías y dependencias de angular
+        run: |
+          git log --oneline -1 | grep MERGE:* | echo
       - uses: actions/checkout@master
       - name: Merge feature to develop branch
         uses: devmasx/merge-branch@v1.3.1
-        if: ${{ git log --oneline -1 | grep MERGE:* }}
         with:
           type: now
           target_branch: dev
